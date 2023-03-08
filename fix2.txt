@@ -1,0 +1,5 @@
+ALTER TABLE Company
+ALTER COLUMN Company_Name varchar(30);
+
+ALTER TABLE Company
+ALTER COLUMN Adress varchar(30);
