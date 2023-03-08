@@ -1,0 +1,26 @@
+INSERT INTO "Company" VALUES
+(newid(), 'Konzum', 'Opatijska 23a');
+
+INSERT INTO "Company" VALUES
+(newid(), 'Interspar', ' Sv. Leopolda B. Mandića 7');
+
+
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Marko', 'Markic', 12345678901,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Ivo', 'Ivic', 12345678902,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Stipo', 'Stipic', 12345678903,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Dario', 'Daric', 12345678904,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Maja', 'Majic', 12345678905,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Ivana', 'Ivic', 12345678906,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
