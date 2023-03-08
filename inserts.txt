@@ -1,0 +1,5 @@
+INSERT INTO "Company" VALUES
+(newid(), 'Konzum', 'Opatijska 23a');
+
+INSERT INTO "Company" VALUES
+(newid(), 'Interspar', ' Sv. Leopolda B. Mandića 7');
