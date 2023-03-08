@@ -10,7 +10,17 @@ INSERT INTO "Employee" VALUES
 (newid(), 'Marko', 'Markic', 12345678901,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
 
 INSERT INTO "Employee" VALUES
-(newid(), 'Ivo', 'Ivic', 12345678902,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'))
+(newid(), 'Ivo', 'Ivic', 12345678902,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
 
 INSERT INTO "Employee" VALUES
-(newid(), 'Stipo', 'Stipic', 12345678903,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'))
+(newid(), 'Stipo', 'Stipic', 12345678903,(SELECT "id" FROM "Company" WHERE "Company_Name"='Konzum'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Dario', 'Daric', 12345678904,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Maja', 'Majic', 12345678905,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
+INSERT INTO "Employee" VALUES
+(newid(), 'Ivana', 'Ivic', 12345678906,(SELECT "id" FROM "Company" WHERE "Company_Name"='Interspar'));
+
