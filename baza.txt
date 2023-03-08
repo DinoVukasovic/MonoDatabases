@@ -1,0 +1,39 @@
+CREATE DATABASE Firma; 
+
+CREATE TABLE Company (
+id UNIQUEIDENTIFIER not null,
+Company_Name varchar not null,
+Adress varchar not null
+PRIMARY KEY (id));
+
+CREATE TABLE Employee (
+id UNIQUEIDENTIFIER not null,
+Employee_Name varchar not null,
+Surname varchar not null,
+OIB char(11) not null,
+PRIMARY KEY (id),
+CompanyId UNIQUEIDENTIFIER,
+CONSTRAINT FK_Employee_Company_CompanyId FOREIGN KEY ("CompanyId") REFERENCES Company(id));
+
+CREATE TABLE Salary (
+EmployeeId UNIQUEIDENTIFIER not null,
+SalaryAmount int not null,
+PRIMARY KEY (EmployeeId),
+CONSTRAINT FK_Salary_Employee_EmployeeId FOREIGN KEY ("EmployeeId") REFERENCES Employee(id));
+
+CREATE TABLE Department (
+id UNIQUEIDENTIFIER not null,
+department_name varchar not null,
+dep_description text not null,
+CompanyID UNIQUEIDENTIFIER not null,
+EmployeeId UNIQUEIDENTIFIER not null,
+PRIMARY KEY (id),
+CONSTRAINT FK_Department_Employee_EmployeeId FOREIGN KEY ("EmployeeId") REFERENCES Employee(id),
+CONSTRAINT FK_Department_Company_CompanyId FOREIGN KEY ("CompanyID") REFERENCES Company(id));
+
+CREATE TABLE DepartmentEmployee (
+id UNIQUEIDENTIFIER not null,
+EmployeeId UNIQUEIDENTIFIER not null,
+DepartmentId UNIQUEIDENTIFIER not null,
+CONSTRAINT FK_DepartmentEmployee_Employee_EmployeeId FOREIGN KEY ("EmployeeId") REFERENCES Employee(id),
+CONSTRAINT FK_DepartmentEmployee_Department_DepartmentId FOREIGN KEY ("DepartmentId") REFERENCES Department(id));
