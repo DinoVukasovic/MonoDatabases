@@ -1,0 +1,11 @@
+SELECT * FROM "Employee" e
+INNER JOIN "Company" c on c."id"=e."CompanyId";
+
+SELECT * FROM "Employee" e
+LEFT JOIN "Company" c on c."id"=e."CompanyId";
+
+SELECT * FROM "Employee" e
+RIGHT JOIN "Company" c on c."id"=e."CompanyId";
+
+SELECT * FROM "Employee" e
+FULL OUTER JOIN "Company" c on c."id"=e."CompanyId";
