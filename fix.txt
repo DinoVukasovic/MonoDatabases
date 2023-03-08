@@ -6,3 +6,7 @@ ALTER COLUMN Surname varchar(30);
 
 ALTER TABLE Department
 ALTER COLUMN department_name varchar(50);
+
+
+
+*Promjena tipa podatka varchar*
