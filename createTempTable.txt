@@ -1,0 +1,2 @@
+SELECT * INTO "Employee_Temp" from "Employee"
+WHERE "CompanyId" like 'EFD5%';
