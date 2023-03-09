@@ -1,0 +1,3 @@
+CREATE VIEW "CompanyEmployees" as (
+SELECT e.Employee_Name, e.Surname, c.Company_Name FROM "Employee" e
+INNER JOIN "Company" c on c."id"=e."CompanyId");
