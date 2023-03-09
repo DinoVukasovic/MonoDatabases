@@ -4,14 +4,10 @@ AS
 BEGIN
 declare @value integer;
 IF(@rand<4)
-BEGIN
 set @value=(SELECT CEILING(@rand*3000));
-END
 ELSE
-BEGIN
 set @value=0
-END
 return @value
 END
 go
-select dbo.randSalaryGenerator(3);
+select dbo.randSalaryGenerator(2);
