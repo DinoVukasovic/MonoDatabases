@@ -1,13 +1,13 @@
-CREATE FUNCTION "randSalaryGenerator" (@rand int) --randomly generates salary <=9000
-returns int
+CREATE FUNCTION "randSalaryGenerator2" (@rand float) --randomly generates salary
+returns float
 AS
 BEGIN
-declare @value integer;
-IF(@rand<4)
-set @value=(SELECT CEILING(@rand*3000));
+declare @value float;
+IF(@rand<1.6)
+set @value=(SELECT (2500*@rand));
 ELSE
 set @value=0
 return @value
 END
 go
-select dbo.randSalaryGenerator(2);
+select dbo.randSalaryGenerator2(rand()+1);
