@@ -1,0 +1,4 @@
+SELECT e."Employee_Name", e."Surname", s."SalaryAmount"
+FROM "Employee" e
+inner join "Salary" s on s."EmployeeId"=e."id"
+WHERE s."SalaryAmount" like (5000);
