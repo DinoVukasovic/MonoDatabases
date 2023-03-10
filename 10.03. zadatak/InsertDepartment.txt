@@ -1,0 +1,29 @@
+INSERT INTO "Department" VALUES
+(newid(), 'Cardiology',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Osjecka bolnica'), 
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Cardiology'));
+
+INSERT INTO "Department" VALUES
+(newid(), 'Gynecology',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Osjecka bolnica'),
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Gynecology'));
+
+INSERT INTO "Department" VALUES
+(newid(), 'Proctology',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Zagrebacka bolnica'),
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Proctology'));
+
+INSERT INTO "Department" VALUES
+(newid(), 'Urology',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Druga Zagrebacka bolnica'),
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Urology'));
+
+INSERT INTO "Department" VALUES
+(newid(), 'Anesthesiology',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Treca Zagrebacka bolnica'),
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Anesthesiology'));
+
+INSERT INTO "Department" VALUES
+(newid(), 'Obstretri',
+(SELECT "Id" FROM "Hospital" WHERE "Name"='Splitska bolnica'),
+(SELECT "Id" FROM "Doctor" WHERE "Specialization"='Obstetrician'));
