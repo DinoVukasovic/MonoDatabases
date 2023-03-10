@@ -1,0 +1,17 @@
+INSERT INTO "Patient" VALUES
+(newid(), 'Ivan', 'Ivić', '1989-10-31', (SELECT "Id" FROM "City" WHERE "Name"='Osijek'),NULL);
+
+INSERT INTO "Patient" VALUES
+(newid(), 'Dino', 'Dinic', '1989-5-5', (SELECT "Id" FROM "City" WHERE "Name"='Osijek'),NULL);
+
+INSERT INTO "Patient" VALUES
+(newid(), 'Mario', 'Maric', '1989-3-1', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'),NULL);
+
+INSERT INTO "Patient" VALUES
+(newid(), 'Dario', 'Daric', '1967-12-12', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'),NULL);
+
+INSERT INTO "Patient" VALUES
+(newid(), 'Mario', 'Maric', '1956-1-2', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'),NULL);
+
+INSERT INTO "Patient" VALUES
+(newid(), 'Roko', 'Rokic', '2000-7-7', (SELECT "Id" FROM "City" WHERE "Name"='Split'),NULL);
