@@ -9,3 +9,7 @@ LEFT JOIN "Patient" p on p."Id"=a."PatientId";
 
 Select a.Date, p.Name, p.Surname FROM "Appointment" a
 FULL OUTER JOIN "Patient" p on p."Id"=a."PatientId";
+
+Select a.Date, p.Name, p.Surname FROM "Appointment" a
+INNER JOIN "Patient" p on p."Id"=a."PatientId"
+ORDER BY a.Date, p.Name;
