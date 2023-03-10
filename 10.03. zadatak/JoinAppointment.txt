@@ -1,0 +1,11 @@
+Select a.Date, p.Name, p.Surname FROM "Appointment" a
+INNER JOIN "Patient" p on p."Id"=a."PatientId";
+
+Select a.Date, p.Name, p.Surname FROM "Appointment" a
+RIGHT JOIN "Patient" p on p."Id"=a."PatientId";
+
+Select a.Date, p.Name, p.Surname FROM "Appointment" a
+LEFT JOIN "Patient" p on p."Id"=a."PatientId";
+
+Select a.Date, p.Name, p.Surname FROM "Appointment" a
+FULL OUTER JOIN "Patient" p on p."Id"=a."PatientId";
