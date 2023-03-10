@@ -1,0 +1,14 @@
+CREATE FUNCTION "SalaryInput" (@rand float, @salary int)
+returns integer
+AS
+BEGIN
+declare @value integer;
+set @value=(@salary+ CEILING (@rand+543));
+return @value;
+END;
+go
+select dbo.SalaryInput(rand(), 15000);
+
+INSERT INTO "Salary" VALUES
+((SELECT "Id" FROM "Doctor" WHERE "id"='486B075B-05F5-4CBE-B2E9-28690FC2B53A'), 
+(select dbo.SalaryInput(rand(), 14000)));

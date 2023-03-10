@@ -1,0 +1,4 @@
+CREATE VIEW "DepartmentDoctor" as (
+SELECT d."Surname", de."Name" 
+FROM "Department" de
+INNER JOIN "Doctor" d on d."Id"=de."DoctorId");

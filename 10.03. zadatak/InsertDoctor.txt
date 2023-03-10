@@ -1,0 +1,17 @@
+INSERT INTO "Doctor" VALUES
+(newid(), 'Mark', 'Ruffalo', 'Cardiology');
+
+INSERT INTO "Doctor" VALUES
+(newid(), 'Tom', 'Hanks', 'Proctology');
+
+INSERT INTO "Doctor" VALUES
+(newid(), 'Henry', 'Cavil', 'Obstetrician');
+
+INSERT INTO "Doctor" VALUES
+(newid(), 'Ryan', 'Reynolds', 'Gynecology');
+
+INSERT INTO "Doctor" VALUES
+(newid(), 'Michael', 'Jackson', 'Urology');
+
+INSERT INTO "Doctor" VALUES
+(newid(), 'Miley', 'Cyrus', 'Anesthesiology');
