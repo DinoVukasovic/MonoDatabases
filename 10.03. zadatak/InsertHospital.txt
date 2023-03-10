@@ -1,0 +1,17 @@
+INSERT INTO "Hospital" VALUES
+(newid(), 'Osjecka bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Osijek'), 'Cetinska 26');
+
+INSERT INTO "Hospital" VALUES
+(newid(), 'Zagrebacka bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'), 'Opatijska 1');
+
+INSERT INTO "Hospital" VALUES
+(newid(), 'Druga Zagrebacka bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'), 'Hutlerova 2');
+
+INSERT INTO "Hospital" VALUES
+(newid(), 'Treca Zagrebacka bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Zagreb'), 'Radiceva 3');
+
+INSERT INTO "Hospital" VALUES
+(newid(), 'Splitska Bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Split'), 'Zrmanjska 45');
+
+INSERT INTO "Hospital" VALUES
+(newid(), 'Druga Splitska bolnica', (SELECT "Id" FROM "City" WHERE "Name"='Split'), 'Samacka 22');
