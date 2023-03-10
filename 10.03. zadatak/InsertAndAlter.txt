@@ -1,0 +1,14 @@
+INSERT INTO "City" VALUES 
+(newid(), 'Osijek');
+
+INSERT INTO "City" VALUES 
+(newid(), 'Zagreb');
+
+INSERT INTO "City" VALUES 
+(newid(), 'Split');
+
+ALTER TABLE Hospital
+ALTER COLUMN Name varchar(30);
+
+ALTER TABLE Hospital
+ADD Address varchar(30);
