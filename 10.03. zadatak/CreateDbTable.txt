@@ -1,0 +1,60 @@
+CREATE DATABASE Hospital;
+
+CREATE TABLE City (
+Id UNIQUEIDENTIFIER not null,
+Name varchar(30) not null
+PRIMARY KEY (Id));
+
+CREATE TABLE Hospital (
+Id UNIQUEIDENTIFIER not null,
+Name varchar not null,
+CityId UNIQUEIDENTIFIER not null,
+PRIMARY KEY (Id),
+CONSTRAINT FK_Hospital_City_CityId FOREIGN KEY("CityId") REFERENCES City("Id"));
+
+CREATE TABLE Patient (
+Id UNIQUEIDENTIFIER not null,
+Name varchar(30) not null,
+Surname varchar(30) not null,
+DateOfBirth date not null,
+CityId UNIQUEIDENTIFIER not null,
+Illnness text null,
+PRIMARY KEY (Id),
+CONSTRAINT FK_Patient_City_CityId FOREIGN KEY ("CityId") REFERENCES City("Id"));
+
+CREATE TABLE Appointment (
+Id UNIQUEIDENTIFIER not null,
+Date datetime not null,
+PatientId UNIQUEIDENTIFIER not null,
+PRIMARY KEY (Id),
+CONSTRAINT FK_Appointment_Patient_PatientId FOREIGN KEY ("PatientId") REFERENCES Patient("Id"));
+
+CREATE TABLE Doctor (
+Id UNIQUEIDENTIFIER not null,
+Name varchar(30) not null,
+Surname varchar(30) not null,
+Specialization varchar(50) not null,
+PRIMARY KEY (Id));
+
+CREATE TABLE Department (
+Id UNIQUEIDENTIFIER not null,
+Name varchar(30) not null,
+HospitalId UNIQUEIDENTIFIER not null,
+DoctorId UNIQUEIDENTIFIER not null,
+PRIMARY KEY (Id),
+CONSTRAINT FK_Department_Hospital_HospitalId FOREIGN KEY ("HospitalId") REFERENCES Hospital("Id"),
+CONSTRAINT FK_Department_Doctor_DoctorId FOREIGN KEY ("DoctorId") REFERENCES Doctor("Id"));
+
+CREATE TABLE DepartmentAppointment (
+Id UNIQUEIDENTIFIER not null,
+DepartmentId UNIQUEIDENTIFIER not null,
+AppointmentId UNIQUEIDENTIFIER not null,
+PRIMARY KEY (Id),
+CONSTRAINT FK_DepartmentAppointment_Department_DepartmentId FOREIGN KEY ("DepartmentId") REFERENCES Department("Id"),
+CONSTRAINT FK_DepartmentAppointment_Appointment_AppointmentId FOREIGN KEY ("AppointmentId") REFERENCES Appointment("Id"));
+
+CREATE TABLE Salary (
+DoctorId UNIQUEIDENTIFIER not null,
+SalaryAmount int not null,
+PRIMARY KEY (DoctorId),
+CONSTRAINT Salary_Doctor_DoctorId FOREIGN KEY ("DoctorId") REFERENCES Doctor("Id"));
