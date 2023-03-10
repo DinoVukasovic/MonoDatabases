@@ -1,0 +1,17 @@
+sp_rename 'Company.id', 'Id', 'COLUMN';
+
+sp_rename 'Company.Company_Name', 'CompanyName', 'COLUMN';
+
+sp_rename 'Department.id', 'Id', 'COLUMN';
+
+sp_rename 'Department.department_name', 'DepartmentName', 'COLUMN';
+
+sp_rename 'Department.dep_description', 'DepDescription', 'COLUMN';
+
+sp_rename 'DepartmentEmployee.id', 'Id', 'COLUMN';
+
+sp_rename 'Employee.id', 'Id', 'COLUMN';
+
+sp_rename 'Employee.Employee_Name', 'EmployeeName', 'COLUMN';
+
+sp_rename 'Employee.OIB', 'Oib', 'COLUMN';
